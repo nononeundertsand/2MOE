@@ -1,1 +1,4 @@
-/Fine-tuning-data
+/Fine-tuning-data/ai2_arc_data/*
+/Fine-tuning-data/mmlu_pro_data
+/Fine-tuning-data/mmlu_data/*
+/Fine-tuning-data/sciq_data/*
