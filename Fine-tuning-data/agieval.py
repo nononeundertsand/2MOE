@@ -1,60 +1,107 @@
 # from datasets import load_dataset, Dataset
 # ds_agieval = load_dataset("json", data_files={"train": "./Fine-tuning-data/agieval_data/*.jsonl"})
 
+# import json
+# import glob
+
+# def inspect_jsonl_full_with_types(path_pattern):
+#     files = glob.glob(path_pattern)
+#     print(f"\n============================")
+#     print(f"Checking: {path_pattern}")
+#     print(f"Found {len(files)} files\n")
+
+#     for filename in files:
+#         print("=" * 80)
+#         print(f"FILE: {filename}")
+#         print("-" * 80)
+
+#         first_keys = None
+#         first_types = None
+#         diff_examples = []
+#         line_num = 0
+
+#         with open(filename, "r", encoding="utf-8") as f:
+#             for line in f:
+#                 line_num += 1
+#                 try:
+#                     obj = json.loads(line)
+#                 except Exception as e:
+#                     print(f"JSON parse error at line {line_num}: {e}")
+#                     continue
+
+#                 keys = tuple(sorted(obj.keys()))
+#                 types = {k: type(obj[k]).__name__ for k in obj.keys()}
+
+#                 if first_keys is None:
+#                     first_keys = keys
+#                     first_types = types
+#                     print(f"Base structure (from line 1): {first_keys}")
+#                     print(f"Base types: {first_types}")
+#                 else:
+#                     if keys != first_keys or types != first_types:
+#                         diff_examples.append((line_num, keys, types))
+
+#         if len(diff_examples) == 0:
+#             print("✓ All lines match the base structure and types.\n")
+#         else:
+#             print(f"⚠ Found {len(diff_examples)} lines with different structure or types:")
+#             for ln, k, t in diff_examples[:10]:  # 限制最多显示 10 条
+#                 print(f"  Line {ln}: keys={k}, types={t}")
+
+#             if len(diff_examples) > 10:
+#                 print(f"  ... {len(diff_examples)-10} more differences.")
+
+#         print()
+
+# # 修改为你自己的路径模式
+# inspect_jsonl_full_with_types("./Fine-tuning-data/agieval_data/*.jsonl")
+
+
+
 import json
-import glob
+import os
 
-def inspect_jsonl_full_with_types(path_pattern):
-    files = glob.glob(path_pattern)
-    print(f"\n============================")
-    print(f"Checking: {path_pattern}")
-    print(f"Found {len(files)} files\n")
+input_dir = "./Fine-tuning-data/agieval_data"
+output_dir = "./Fine-tuning-data/agieval_data_converted"
+os.makedirs(output_dir, exist_ok=True)
 
-    for filename in files:
-        print("=" * 80)
-        print(f"FILE: {filename}")
-        print("-" * 80)
+input_files = [
+    "jec-qa-ca.jsonl",
+    "jec-qa-kd.jsonl"
+]
 
-        first_keys = None
-        first_types = None
-        diff_examples = []
-        line_num = 0
+output_file = os.path.join(output_dir, "jec-qa-all_converted.jsonl")
 
-        with open(filename, "r", encoding="utf-8") as f:
-            for line in f:
-                line_num += 1
-                try:
-                    obj = json.loads(line)
-                except Exception as e:
-                    print(f"JSON parse error at line {line_num}: {e}")
+
+def convert_item(item):
+    """
+    将 AGIEval 的 JEC-QA 单条样本转换为统一格式。
+    """
+    new_item = {
+        "source": "AGIEval",                  # str
+        "task_type": "mcq",                   # str
+        "passage": "" if item["passage"] is None else str(item["passage"]),  # str
+        "question": str(item["question"]),    # str
+        "options": [str(opt) for opt in item["options"]],  # list[str]
+        "answer": list(item["label"]),        # list[str]
+        "extra": {}
+    }
+    return new_item
+
+
+# 写入一个 jsonl 文件
+with open(output_file, "w", encoding="utf-8") as fout:
+    for fname in input_files:
+        in_path = os.path.join(input_dir, fname)
+
+        with open(in_path, "r", encoding="utf-8") as fin:
+            for line in fin:
+                line = line.strip()
+                if not line:
                     continue
 
-                keys = tuple(sorted(obj.keys()))
-                types = {k: type(obj[k]).__name__ for k in obj.keys()}
+                item = json.loads(line)
+                new_item = convert_item(item)
+                fout.write(json.dumps(new_item, ensure_ascii=False) + "\n")
 
-                if first_keys is None:
-                    first_keys = keys
-                    first_types = types
-                    print(f"Base structure (from line 1): {first_keys}")
-                    print(f"Base types: {first_types}")
-                else:
-                    if keys != first_keys or types != first_types:
-                        diff_examples.append((line_num, keys, types))
-
-        if len(diff_examples) == 0:
-            print("✓ All lines match the base structure and types.\n")
-        else:
-            print(f"⚠ Found {len(diff_examples)} lines with different structure or types:")
-            for ln, k, t in diff_examples[:10]:  # 限制最多显示 10 条
-                print(f"  Line {ln}: keys={k}, types={t}")
-
-            if len(diff_examples) > 10:
-                print(f"  ... {len(diff_examples)-10} more differences.")
-
-        print()
-
-# 修改为你自己的路径模式
-inspect_jsonl_full_with_types("./Fine-tuning-data/agieval_data/*.jsonl")
-
-
-
+print(f"✔ 已完成转换与合并，输出文件：{output_file}")

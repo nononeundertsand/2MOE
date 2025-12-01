@@ -3,3 +3,4 @@
 /Fine-tuning-data/mmlu_data/*
 /Fine-tuning-data/sciq_data/*
 /Fine-tuning-data/agieval_data/*
+/Fine-tuning-data/agieval_data_converted/*
