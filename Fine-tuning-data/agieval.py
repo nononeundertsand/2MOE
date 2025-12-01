@@ -57,31 +57,4 @@ def inspect_jsonl_full_with_types(path_pattern):
 inspect_jsonl_full_with_types("./Fine-tuning-data/agieval_data/*.jsonl")
 
 
-# import json
-# import glob
-# from datasets import Dataset, concatenate_datasets
 
-# def unify_agieval_example(example):
-#     # 如果没有 'answer' 字段，赋值为 None
-#     if "answer" not in example:
-#         example["answer"] = None
-#     return example
-
-# # 获取所有 jsonl 文件
-# paths = glob.glob("./Fine-tuning-data/agieval_data/*.jsonl")
-# datasets_list = []
-
-# for p in paths:
-#     # 单文件读取
-#     ds = Dataset.from_json(p)
-#     # map 统一 answer
-#     ds = ds.map(unify_agieval_example)
-#     datasets_list.append(ds)
-
-# # 合并所有文件
-# merged_agieval = concatenate_datasets(datasets_list)
-
-# # 保存为 jsonl
-# merged_agieval.to_json("merged_agieval.jsonl", orient="records", lines=True)
-
-# print(f"Merged dataset saved, total examples: {len(merged_agieval)}")
