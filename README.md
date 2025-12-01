@@ -118,6 +118,15 @@ cluster_7.jsonl
 ## **Step 1.4：对每个 cluster 进行 LoRA Fine-tune**
 
 论文中 base-model 选择：
+模拟仿真实验：
+| 专家编号    | Base LLM            |
+| ------- | ------------------- |
+|  0, 1,  | Qwen2.5-7B-Instruct |
+|  2, 3,  | Qwen2.5-3B-Instruct |
+|  4, 5,  | Llama-3.2-3B-Instruct |
+|  6, 7,  | Mistral-7B-Instruct-v0.3 |
+
+在真实环境中的实验：
 
 | 专家编号    | Base LLM            |
 | ------- | ------------------- |
