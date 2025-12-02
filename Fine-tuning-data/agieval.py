@@ -159,6 +159,84 @@ def agieval_sat_data_merge():
 
     print(f"✔ 已完成 SAT 数据集转换与合并：{output_file}")
 
+def agieval_gaokao_data_merge():
+    # 输入与输出路径
+    input_dir = "./Fine-tuning-data/agieval_data"
+    output_dir = "./Fine-tuning-data/agieval_data_converted"
+    os.makedirs(output_dir, exist_ok=True)
+
+    # 组 1 文件列表
+    group1_files = [
+        "aqua-rat.jsonl",
+        "gaokao-biology.jsonl",
+        "gaokao-chemistry.jsonl",
+        "gaokao-chinese.jsonl",
+        "gaokao-english.jsonl",
+        "gaokao-geography.jsonl",
+        "gaokao-history.jsonl",
+        "gaokao-mathqa.jsonl",
+        "gaokao-physics.jsonl",
+        "logiqa-en.jsonl",
+        "logiqa-zh.jsonl",
+        "lsat-ar.jsonl",
+        "lsat-lr.jsonl",
+        "lsat-rc.jsonl"
+    ]
+
+    output_file = os.path.join(output_dir, "agieval-group1_converted.jsonl")
+
+
+    def convert_item_group1(item):
+        """
+        转换 AGIEval 组 1 标准结构
+        结构：('answer', 'label', 'options', 'other', 'passage', 'question')
+        """
+
+        # passage: None or str
+        passage = item.get("passage")
+        passage = "" if passage is None else str(passage)
+
+        # label: str → list[str]
+        label = item.get("label")
+        answer_list = [str(label)] if label is not None else []
+
+        # other: dict or None
+        extra = item.get("other")
+        extra = extra if isinstance(extra, dict) else {}
+
+        new_item = {
+            "source": "AGIEval",
+            "task_type": "mcq",
+            "passage": passage,
+            "question": str(item["question"]),
+            "options": [str(x) for x in item["options"]],
+            "answer": answer_list,
+            "extra": extra
+        }
+
+        return new_item
+
+
+    with open(output_file, "w", encoding="utf-8") as fout:
+        for fname in group1_files:
+            file_path = os.path.join(input_dir, fname)
+
+            with open(file_path, "r", encoding="utf-8") as fin:
+                for line in fin:
+                    line = line.strip()
+                    if not line:
+                        continue
+
+                    item = json.loads(line)
+                    new_item = convert_item_group1(item)
+                    fout.write(json.dumps(new_item, ensure_ascii=False) + "\n")
+
+    print("✔ 已完成 AGIEval 组 1 的全部数据转换与合并：", output_file)
+
+
+
+
 if __name__ == "__main__":
     # agieval_jec_data_merge()
-    agieval_sat_data_merge()
+    # agieval_sat_data_merge()
+    agieval_gaokao_data_merge()
