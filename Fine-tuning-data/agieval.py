@@ -61,47 +61,104 @@
 import json
 import os
 
-input_dir = "./Fine-tuning-data/agieval_data"
-output_dir = "./Fine-tuning-data/agieval_data_converted"
-os.makedirs(output_dir, exist_ok=True)
+def agieval_jec_data_merge():
+    input_dir = "./Fine-tuning-data/agieval_data"
+    output_dir = "./Fine-tuning-data/agieval_data_converted"
+    os.makedirs(output_dir, exist_ok=True)
 
-input_files = [
-    "jec-qa-ca.jsonl",
-    "jec-qa-kd.jsonl"
-]
+    input_files = [
+        "jec-qa-ca.jsonl",
+        "jec-qa-kd.jsonl"
+    ]
 
-output_file = os.path.join(output_dir, "jec-qa-all_converted.jsonl")
-
-
-def convert_item(item):
-    """
-    将 AGIEval 的 JEC-QA 单条样本转换为统一格式。
-    """
-    new_item = {
-        "source": "AGIEval",                  # str
-        "task_type": "mcq",                   # str
-        "passage": "" if item["passage"] is None else str(item["passage"]),  # str
-        "question": str(item["question"]),    # str
-        "options": [str(opt) for opt in item["options"]],  # list[str]
-        "answer": list(item["label"]),        # list[str]
-        "extra": {}
-    }
-    return new_item
+    output_file = os.path.join(output_dir, "jec-qa-all_converted.jsonl")
 
 
-# 写入一个 jsonl 文件
-with open(output_file, "w", encoding="utf-8") as fout:
-    for fname in input_files:
-        in_path = os.path.join(input_dir, fname)
+    def convert_item(item):
+        """
+        将 AGIEval 的 JEC-QA 单条样本转换为统一格式。
+        """
+        new_item = {
+            "source": "AGIEval",                  # str
+            "task_type": "mcq",                   # str
+            "passage": "" if item["passage"] is None else str(item["passage"]),  # str
+            "question": str(item["question"]),    # str
+            "options": [str(opt) for opt in item["options"]],  # list[str]
+            "answer": list(item["label"]),        # list[str]
+            "extra": {}
+        }
+        return new_item
 
-        with open(in_path, "r", encoding="utf-8") as fin:
-            for line in fin:
-                line = line.strip()
-                if not line:
-                    continue
 
-                item = json.loads(line)
-                new_item = convert_item(item)
-                fout.write(json.dumps(new_item, ensure_ascii=False) + "\n")
+    # 写入一个 jsonl 文件
+    with open(output_file, "w", encoding="utf-8") as fout:
+        for fname in input_files:
+            in_path = os.path.join(input_dir, fname)
 
-print(f"✔ 已完成转换与合并，输出文件：{output_file}")
+            with open(in_path, "r", encoding="utf-8") as fin:
+                for line in fin:
+                    line = line.strip()
+                    if not line:
+                        continue
+
+                    item = json.loads(line)
+                    new_item = convert_item(item)
+                    fout.write(json.dumps(new_item, ensure_ascii=False) + "\n")
+
+    print(f"✔ 已完成转换与合并，输出文件：{output_file}")
+
+def agieval_sat_data_merge():
+    input_dir = "./Fine-tuning-data/agieval_data"
+    output_dir = "./Fine-tuning-data/agieval_data_converted"
+    os.makedirs(output_dir, exist_ok=True)
+
+    input_files = [
+        "sat-en-without-passage.jsonl",
+        "sat-en.jsonl",
+        "sat-math.jsonl"
+    ]
+
+    output_file = os.path.join(output_dir, "sat-all_converted.jsonl")
+
+
+    def convert_item(item):
+        """
+        将 SAT 系列样本转换为统一格式。
+        """
+
+        # passage 可能是 NoneType 或 str
+        passage = item.get("passage")
+        passage = "" if passage is None else str(passage)
+
+        new_item = {
+            "source": "AGIEval",
+            "task_type": "mcq",
+            "passage": passage,
+            "question": str(item["question"]),
+            "options": [str(opt) for opt in item["options"]],
+            "answer": [str(item["label"])],   # label 为 str，需转为 list[str]
+            "extra": item["other"] if isinstance(item.get("other"), dict) else {}
+        }
+
+        return new_item
+
+
+    with open(output_file, "w", encoding="utf-8") as fout:
+        for fname in input_files:
+            in_path = os.path.join(input_dir, fname)
+
+            with open(in_path, "r", encoding="utf-8") as fin:
+                for line in fin:
+                    line = line.strip()
+                    if not line:
+                        continue
+
+                    item = json.loads(line)
+                    new_item = convert_item(item)
+                    fout.write(json.dumps(new_item, ensure_ascii=False) + "\n")
+
+    print(f"✔ 已完成 SAT 数据集转换与合并：{output_file}")
+
+if __name__ == "__main__":
+    # agieval_jec_data_merge()
+    agieval_sat_data_merge()
