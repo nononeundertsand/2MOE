@@ -4,3 +4,4 @@
 /Fine-tuning-data/sciq_data/*
 /Fine-tuning-data/agieval_data/*
 /Fine-tuning-data/agieval_data_converted/*
+/datasets/*
