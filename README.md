@@ -42,7 +42,7 @@ Phase 5：最终结果整理与复现验证
 需要安装的框架：
 
 ```
-python >= 3.10
+python >= 3.9
 pytorch >= 2.1
 transformers >= 4.40
 peft（LoRA）
@@ -75,7 +75,7 @@ bitsandbytes（4-bit 量化）
 
 | 数据集 | 主要用途 | 数据量/规模 | 特点 | 下载源 |
 |--------|----------|--------------|--------|----------|
-| **MMLU-Pro** | 综合知识 + 多领域推理评测 | 12,102 题；约 4.19 MB | 比 MMLU 更难、更稳健；10 选项减少猜测影响；覆盖 14 个领域 | GitHub: https://github.com/TIGER-AI-Lab/MMLU-Pro<br>HF: https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro |
+| **MMLU-Pro** | 综合知识 + 多领域推理评测 | 12,102 题；约 4.19 MB | 比 MMLU 更难、更稳健；10 选项减少猜测影响；覆盖 14 个领域。*只有验证集和测试*集 | GitHub: https://github.com/TIGER-AI-Lab/MMLU-Pro<br>HF: https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro |
 | **ARC** | 小学～中学科学知识 + 推理评测 | 7,787 题；包含 14M 语料库（ARC Corpus） | 由 Easy + Challenge 组成；Challenge 难度高；测试科学理解而非记忆 | 论文: https://arxiv.org/abs/1803.05457 <br>HF: https://huggingface.co/datasets/allenai/ai2_arc|
 | **SciQ** | 科学（物理/化学/生物）多选推理评测 | 13,679 题；数据约 2.82MB（下载）/10.5MB（展开） | 4 选项；提供 supporting paragraph（支持文本）；适合训练和评估 | HF: https://huggingface.co/datasets/allenai/sciq |
 | **AGIEval** | 人类考试（SAT/高考/资格考试）能力评测 | 20 个任务；MCQ + Cloze | 来源为真实高标准考试；覆盖语文/数学/法律等多领域 | GitHub: https://github.com/ruixiangcui/AGIEval<br>Paper: https://arxiv.org/abs/2304.06364 |
@@ -84,8 +84,10 @@ bitsandbytes（4-bit 量化）
 将它们全部合并成统一格式：
 
 ```
-data/combined_train.jsonl
+datasets/dataset.jsonl
 ```
+
+训练后用于训练门控网络的数据集为MMLU
 
 ---
 
