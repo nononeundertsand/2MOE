@@ -36,50 +36,60 @@ CACHE_DIR = "D:/2MOE/mGTE/mGTE_model"
 # -------------------------------
 # Step 1: 加载模型和 tokenizer
 # -------------------------------
-
-# 1. 加载 tokenizer（必须使用模型名+trust_remote_code，优先使用本地缓存）
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True, cache_dir=CACHE_DIR)
-
-# 2. 加载模型（本地缓存路径）
 model = AutoModel.from_pretrained(MODEL_NAME, trust_remote_code=True, cache_dir=CACHE_DIR)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 model.eval()
 
-
 # -------------------------------
 # Step 2: 读取 JSONL 数据集
 # -------------------------------
 data = []
-texts = []
 with open(DATA_PATH, "r", encoding="utf-8") as f:
     for line in f:
         item = json.loads(line)
         data.append(item)
-        # 假设题目文本字段是 "question"
-        texts.append(item["question"])
 
-print(f"共读取 {len(texts)} 条题目")
+print(f"共读取 {len(data)} 条题目")
 
 # -------------------------------
-# Step 3: 批量生成 embedding
+# Step 3: 批量生成 embedding（question + passage）
 # -------------------------------
-def embed_texts(texts, batch_size=32):
+def embed_texts(data_list, batch_size=32):
+    """
+    data_list: 原始数据列表，每条至少包含 'question' 和 'passage'
+    """
     embeddings = []
     with torch.no_grad():
-        for i in tqdm(range(0, len(texts), batch_size), desc="生成 embedding"):
-            batch_texts = texts[i:i+batch_size]
+        for i in tqdm(range(0, len(data_list), batch_size), desc="生成 embedding"):
+            batch_data = data_list[i:i+batch_size]
+
+            # 拼接 question + passage
+            batch_texts = [
+                item["question"] + " " + item.get("passage", "")
+                for item in batch_data
+            ]
+
+            # Tokenize
             tokens = tokenizer(batch_texts, padding=True, truncation=True, return_tensors="pt").to(device)
+
+            # 前向推理
             outputs = model(**tokens)
+
             # 使用 [CLS] token 作为句子向量
             batch_emb = outputs.last_hidden_state[:, 0, :].cpu()
-            # 归一化向量，方便 KMeans
+
+            # 归一化向量
             batch_emb = torch.nn.functional.normalize(batch_emb, p=2, dim=1)
             embeddings.append(batch_emb)
+
     return torch.cat(embeddings, dim=0)
 
-embeddings = embed_texts(texts, batch_size=BATCH_SIZE)
+
+# 生成 embedding
+embeddings = embed_texts(data, batch_size=BATCH_SIZE)
 print("Embedding shape:", embeddings.shape)
 
 # -------------------------------
