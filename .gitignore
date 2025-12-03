@@ -5,3 +5,5 @@
 /Fine-tuning-data/agieval_data/*
 /Fine-tuning-data/agieval_data_converted/*
 /datasets/*
+/fine_tuning_dataset
+/mGTE/mGTE_model/*
