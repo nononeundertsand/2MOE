@@ -33,6 +33,10 @@ NUM_CLUSTERS = 8  # KMeans 聚类数
 MODEL_NAME = "Alibaba-NLP/gte-multilingual-base"
 CACHE_DIR = "D:/2MOE/mGTE/mGTE_model"
 
+# -------------------------------
+# Step 1: 加载模型和 tokenizer
+# -------------------------------
+
 # 1. 加载 tokenizer（必须使用模型名+trust_remote_code，优先使用本地缓存）
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True, cache_dir=CACHE_DIR)
 
@@ -42,9 +46,6 @@ model = AutoModel.from_pretrained(MODEL_NAME, trust_remote_code=True, cache_dir=
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 model.eval()
-
-
-
 
 
 # -------------------------------
