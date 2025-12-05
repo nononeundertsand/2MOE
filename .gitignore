@@ -7,3 +7,11 @@
 /datasets/*
 /fine_tuning_dataset
 /mGTE/mGTE_model/*
+/Mistral-7B/Mistral-7B-model/*
+/Qwen-3B/Qwen_model/*
+/Qwen-7B/Qwen-7B-model/*
+Llama-3.2-3B/llama-3.2-3B_model/*
+/Mistral7b-lora-output/*
+/Qwen2.5-3b-lora-output/*
+/Qwen2.5-7b-lora-output/*
+/llama3_3b_lora_output/*
