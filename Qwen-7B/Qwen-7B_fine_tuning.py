@@ -29,8 +29,8 @@ from peft import LoraConfig, get_peft_model
 # ============================================================
 
 MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
-MODEL_PATH = "D:/2MOE/Qwen-7B/Qwen-7B-model/Qwen2.5-7B-Instruct"   # <-- 请改成你的本地路径
-DATA_PATH  = "D:/2MOE/fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"
+MODEL_PATH = "./Qwen-7B/Qwen-7B-model/Qwen2.5-7B-Instruct"   # <-- 请改成你的本地路径
+DATA_PATH  = "./fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"
 
 OUTPUT_DIR = "./qwen2.5-7b-lora-output"
 CUTOFF_LEN = 8192

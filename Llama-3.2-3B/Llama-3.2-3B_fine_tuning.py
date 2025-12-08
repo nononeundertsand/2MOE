@@ -35,8 +35,8 @@ from peft import LoraConfig, get_peft_model
 MODEL_NAME = "meta-llama/Llama-3.2-3B"
 # If you have pre-downloaded model files, set MODEL_PATH to that folder.
 # Otherwise set MODEL_PATH = None to download from HF hub.
-MODEL_PATH = "D:/2MOE/Llama-3.2-3B/Llama-3.2-3B_model"
-DATA_PATH = "D:/2MOE/fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"
+MODEL_PATH = "./2MOE/Llama-3.2-3B/Llama-3.2-3B_model"
+DATA_PATH = "./2MOE/fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"
 OUTPUT_DIR = "./llama3_3b_lora_output"
 CUTOFF_LEN = 8192
 

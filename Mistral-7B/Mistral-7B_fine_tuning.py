@@ -28,9 +28,9 @@ from peft import LoraConfig, get_peft_model
 # ============================================================
 
 MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"   
-MODEL_PATH = "D:/2MOE/Mistral-7B/Mistral-7B-model"     # ← 修改为你的实际路径
+MODEL_PATH = "./2MOE/Mistral-7B/Mistral-7B-model"     # ← 修改为你的实际路径
 
-DATA_PATH = "D:/2MOE/fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"
+DATA_PATH = "./2MOE/fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"
 
 OUTPUT_DIR = "./mistral7b-lora-output"
 CUTOFF_LEN = 8192
