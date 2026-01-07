@@ -24,16 +24,14 @@ from datasets import load_dataset
 from peft import LoraConfig, get_peft_model
 
 
-# ============================================================
-#                   ★★★★★ 修改区（关键） ★★★★★
-# ============================================================
 
-MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
-MODEL_PATH = "./Qwen-7B/Qwen-7B-model/Qwen2.5-7B-Instruct"   # <-- 请改成你的本地路径
-DATA_PATH  = "./fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"
 
-OUTPUT_DIR = "./qwen2.5-7b-lora-output"
-CUTOFF_LEN = 8192
+MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"  # 模型名称
+MODEL_PATH = "./Qwen-7B/Qwen-7B-model/Qwen2.5-7B-Instruct"   # 模型路径
+DATA_PATH  = "./fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"  # 训练数据路径
+
+OUTPUT_DIR = "./qwen2.5-7b-lora-output"  # 输出路径
+CUTOFF_LEN = 8192  # 长上下文设定
 
 # Qwen7B 显存更大 → 建议降低 batch
 LR = 3e-5
@@ -54,7 +52,7 @@ os.environ["PYTHONHASHSEED"] = str(SEED)
 torch.manual_seed(SEED)
 
 # ------------------------------------------------------------
-# Prompt builder
+# Prompt生成器，用于将一条训练数据转为prompt格式
 # ------------------------------------------------------------
 def build_prompt_from_example(ex: Dict) -> str:
     parts: List[str] = []
@@ -78,7 +76,7 @@ def build_prompt_from_example(ex: Dict) -> str:
 
 
 # ============================================================
-# Load Dataset
+# Load Dataset 加载数据集
 # ============================================================
 print("Loading dataset:", DATA_PATH)
 raw_ds = load_dataset("json", data_files=DATA_PATH, split="train")
@@ -86,7 +84,7 @@ print("Dataset loaded. Examples:", len(raw_ds))
 
 
 # ============================================================
-# Load tokenizer & model
+# Load tokenizer & model 加载模型和分词器
 # ============================================================
 print("Loading tokenizer...")
 tokenizer = AutoTokenizer.from_pretrained(
@@ -118,7 +116,7 @@ print("Model loaded.")
 
 
 # ============================================================
-# Apply LoRA
+# Apply LoRA  配置LoRA并应用到模型
 # ============================================================
 print("Applying LoRA...")
 
@@ -128,18 +126,19 @@ lora_config = LoraConfig(
     lora_dropout=LORA_DROPOUT,
     target_modules=LORA_TARGET_MODULES,
     bias="none",
-    task_type="CAUSAL_LM",
+    task_type="CAUSAL_LM",  # 指明任务类型，PEFT 可能针对不同任务调整内置行为。
 )
 
 model = get_peft_model(model, lora_config)
-model.print_trainable_parameters()
+model.print_trainable_parameters()  # 打印可训练参数的统计，
+#帮助确认 LoRA 是否正确应用（会显示总参数量与可训练的参数量比例）
 
 
 # ============================================================
-# Tokenization
+# Tokenization 构造训练用 tokens、labels
 # ============================================================
 def tokenize_example(example):
-    prompt = build_prompt_from_example(example)
+    prompt = build_prompt_from_example(example)  # 构造 prompt
 
     answer = None
     if "answer" in example and example["answer"]:
