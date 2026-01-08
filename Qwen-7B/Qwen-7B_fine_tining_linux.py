@@ -16,8 +16,9 @@ from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 # ================= 配置对齐论文 Table V =================
 MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
 MODEL_PATH = "./Qwen-7B/Qwen-7B-model/Qwen2.5-7B-Instruct"
+TOKENIZER_PATH = "./Qwen-7B/tokenizer"  # 分词器路径
 DATA_PATH  = "./fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"
-OUTPUT_DIR = "./qwen2.5-7b-lora-moe2"
+OUTPUT_DIR = "./qwen2.5-7b-lora-expert0"
 
 # 论文核心参数
 CUTOFF_LEN = 8192
@@ -67,7 +68,12 @@ def tokenize_example(example):
 
 # ================= 模型加载 =================
 print("Loading tokenizer & model...")
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True, cache_dir=MODEL_PATH)
+tokenizer = AutoTokenizer.from_pretrained(
+    MODEL_NAME,
+    trust_remote_code=True,
+    cache_dir=TOKENIZER_PATH,
+    local_files_only=True
+)
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
@@ -75,8 +81,8 @@ if tokenizer.pad_token is None:
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
     trust_remote_code=True,
-    torch_dtype=torch.bfloat16, 
-    # device_map 在分布式训练时由 Trainer 处理，不在此手动指定
+    torch_dtype=torch.float16,    # 使用 float16 加载模型
+    cache_dir=MODEL_PATH,
 )
 
 # 启用梯度检查点以节省显存 (处理 8192 长度必开)

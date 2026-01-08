@@ -5,7 +5,7 @@ Usage: python train_windows_qwen7b_lora.py
 """
 
 import os
-os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+# os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 
 import math
 import json
@@ -28,6 +28,7 @@ from peft import LoraConfig, get_peft_model
 
 MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"  # 模型名称
 MODEL_PATH = "./Qwen-7B/Qwen-7B-model/Qwen2.5-7B-Instruct"   # 模型路径
+TOKENIZER_PATH = "./Qwen-7B/tokenizer"  # 分词器路径
 DATA_PATH  = "./fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"  # 训练数据路径
 
 OUTPUT_DIR = "./qwen2.5-7b-lora-output"  # 输出路径
@@ -90,7 +91,8 @@ print("Loading tokenizer...")
 tokenizer = AutoTokenizer.from_pretrained(
     MODEL_NAME,
     trust_remote_code=True,
-    cache_dir=MODEL_PATH,
+    cache_dir=TOKENIZER_PATH,
+    local_files_only=True
 )
 
 if tokenizer.pad_token is None:
