@@ -44,7 +44,7 @@ MAX_GRAD_NORM = 1.0
 LORA_R = 256
 LORA_ALPHA = 512
 LORA_DROPOUT = 0.05
-LORA_TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj"]
+LORA_TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
 SEED = 42
 
@@ -105,7 +105,7 @@ print("Loading model Qwen2.5-7B-Instruct (float32)...")
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
     trust_remote_code=True,
-    torch_dtype=torch.float32,    # 原始 fp32 以保证兼容性
+    torch_dtype=torch.float16,    # 使用 float16 加载模型
     cache_dir=MODEL_PATH,
 )
 
