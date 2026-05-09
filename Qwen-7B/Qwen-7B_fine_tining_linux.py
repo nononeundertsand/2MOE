@@ -15,7 +15,7 @@ from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 
 # ================= 配置对齐论文 Table V =================
 MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
-MODEL_PATH = "./Qwen-7B/Qwen-7B-model/Qwen2.5-7B-Instruct"
+MODEL_PATH = "./Qwen-7B/Qwen-7B-model/Qwen2.5-7B-Instruct/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28"  # 模型路径
 TOKENIZER_PATH = "./Qwen-7B/tokenizer"  # 分词器路径
 DATA_PATH  = "./fine_tuning_dataset/fine_tuning_dataset_oneshot.jsonl"
 OUTPUT_DIR = "./qwen2.5-7b-lora-expert0"
@@ -69,24 +69,28 @@ def tokenize_example(example):
 # ================= 模型加载 =================
 print("Loading tokenizer & model...")
 tokenizer = AutoTokenizer.from_pretrained(
-    MODEL_NAME,
+    MODEL_PATH,               # 直接指向本地文件夹
     trust_remote_code=True,
-    cache_dir=TOKENIZER_PATH,
-    local_files_only=True
+    local_files_only=True        # 确保只读本地
 )
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
 # 双卡 Linux 服务器建议使用 bf16
 model = AutoModelForCausalLM.from_pretrained(
-    MODEL_NAME,
+    MODEL_PATH,                   # 直接指向本地文件夹
     trust_remote_code=True,
-    torch_dtype=torch.float16,    # 使用 float16 加载模型
-    cache_dir=MODEL_PATH,
+    torch_dtype=torch.bfloat16,   # Linux/A800 建议直接用 bf16
+    local_files_only=True,
+    attn_implementation="flash_attention_2"
 )
+
+model.config.use_cache = False  # 关闭kv缓存以适应梯度检查点
 
 # 启用梯度检查点以节省显存 (处理 8192 长度必开)
 model.gradient_checkpointing_enable()
+
+
 
 # LoRA 配置
 lora_config = LoraConfig(
@@ -119,6 +123,7 @@ training_args = TrainingArguments(
     tf32=True,                  # 开启 Ampere 显卡加速
     max_grad_norm=MAX_GRAD_NORM,
     gradient_checkpointing=True,
+    label_names=["labels"],
     report_to="none",
     ddp_find_unused_parameters=False, # 提升分布式效率
 )
@@ -127,7 +132,7 @@ trainer = Trainer(
     model=model,
     args=training_args,
     train_dataset=tokenized_ds,
-    tokenizer=tokenizer,
+    processing_class=tokenizer,
 )
 
 print("Start Training on Multiple GPUs...")
@@ -138,3 +143,5 @@ if trainer.is_world_process_zero():
     model.save_pretrained(OUTPUT_DIR)
     tokenizer.save_pretrained(OUTPUT_DIR)
     print(f"Master process saved model to {OUTPUT_DIR}")
+
+    
