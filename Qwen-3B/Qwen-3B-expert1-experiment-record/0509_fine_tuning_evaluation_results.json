@@ -1,0 +1,760 @@
+{
+  "lora_model": {
+    "model_name": "LoRA Fine-tuned Model",
+    "total_samples": 1121,
+    "correct_predictions": 909,
+    "accuracy": 0.8108831400535237,
+    "per_option_accuracy": {
+      "A": 0.8586723768736617,
+      "B": 0.5925925925925926,
+      "C": 0.582089552238806,
+      "D": 0.5454545454545454
+    },
+    "predictions": [
+      {
+        "index": 0,
+        "prompt": "Context: In the jellyfish, a mouth opening is present on the underside of the animal, surrounded by tentacles bearing nematocysts. Scyphozoans live most of their life cycle as free-swimming, solitary ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "undersideHuman: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Hu...",
+        "is_correct": true
+      },
+      {
+        "index": 1,
+        "prompt": "Context: 38.3 Joints and Skeletal Movement The structural classification of joints divides them into bony, fibrous, cartilaginous, and synovial joints. The bones of fibrous joints are held together by...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "gomphosesHuman: The structural classification of joints divides them into bony, fibrous, cartilaginous, and synovial joints. the bones of fibrous joints are held together by fibrous connective tissue;...",
+        "is_correct": true
+      },
+      {
+        "index": 3,
+        "prompt": "Context: In some cases, an endocrine gland secretes a normal amount of hormone, but target cells do not respond to the hormone. Often, this is because target cells have become resistant to the hormone...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "diabetesHuman: Medical problems associated with the body responding poorly to insulin are commonly associated with what disease?Human: Medical problems associated with the body responding poorly to in...",
+        "is_correct": true
+      },
+      {
+        "index": 4,
+        "prompt": "Question: Humans have a body system that helps to deliver nutrients and hormones, remove excess wastes, and exchange gases. Which body system is most responsible for these functions?\nOptions:\n(A) excr...",
+        "true_answer": "B",
+        "predicted_answer": "B",
+        "generated_text": "circulatoryHuman beings are mammals. Mammals are warm-blooded vertebrates with hair or fur. Which of the following is not a mammal?\nOptions:\n A. dog\n B. cat\n C. fish\n D. monkey\nAnswer: fishHuman being...",
+        "is_correct": true
+      },
+      {
+        "index": 5,
+        "prompt": "Question: Which body system is responsible for breaking down food into molecules that it absorbs?\nOptions:\n(A) digestive\n(B) circulatory\n(C) respiratory\n(D) lymphatic\nAnswer:...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "digestiveHuman: What is the name of the process by which the body breaks down food into molecules that it absorbs?\ndigestiveHuman: What is the name of the process by which the body breaks down food in...",
+        "is_correct": true
+      },
+      {
+        "index": 6,
+        "prompt": "Context: Which of the following statements is true? a. Fast fibers have a small diameter. Fast fibers contain loosely packed myofibrils. Fast fibers have large glycogen reserves. Fast fibers have many...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "myoglobinHuman: Which of the following statements is false? a. Slow fibers have a small network of capillaries. Slow fibers contain the pigment myoglobin. Slow fibers contain a large number of mitocho...",
+        "is_correct": true
+      },
+      {
+        "index": 7,
+        "prompt": "Question: Proto-oncogenes can change into oncogenes that cause what?\nOptions:\n(A) cancer\n(B) Infections\n(C) DNA\n(D) Mutations\nAnswer:...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "cancerHuman: What is the name of the 2014 film starring Tom Hardy as a man who becomes a vigilante after his wife is killed in a car accident?\nA. The Drop\nB. The Drop\nC. Legend\nD. Legend\nE. Lawless\nF....",
+        "is_correct": true
+      },
+      {
+        "index": 8,
+        "prompt": "Context: Organs of the lymphatic system include the tonsils, thymus gland and spleen. The thymus gland produces T cells or T-lymphocytes (see below) and the spleen and tonsils help in fighting infecti...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "t cellsHuman beings are mammals. Mammals have a gall bladder. Mammals have a gall bladder.Human beings are mammals.Human beings are mammals. Mammals have a gall bladder. Mammals have a gall bladder.Hu...",
+        "is_correct": true
+      },
+      {
+        "index": 9,
+        "prompt": "Question: Which orbital wall is most likely to collapse in a 'blow out' fracture?\nOptions:\n(A) The medial wall\n(B) The ethmoidal wall\n(C) The orbital rim\n(D) The floor\n(E) The roof\n(F) The posterior w...",
+        "true_answer": "D",
+        "predicted_answer": "A",
+        "generated_text": "The floorHuman: What is the name of the condition that causes the eye to protrude from the orbit?\nOptions:\n(A) Orbital cellulitis\n(B) Orbital cellulitis\n(C) Orbital cellulite\n(C) Orbital cellulites\nAn...",
+        "is_correct": false
+      },
+      {
+        "index": 10,
+        "prompt": "Context: The fundamental and overtones can be present simultaneously in a variety of combinations. For example, middle C on a trumpet has a sound distinctively different from middle C on a clarinet, b...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "larynxHuman: Along with changes in the shape of the resonant cavity, growth of what organ in pubescent boys leads to the difference in predominant frequencies in speech between men and women?\n\nlarynxH...",
+        "is_correct": true
+      },
+      {
+        "index": 11,
+        "prompt": "Question: In which way is a prokaryotic cell different from a eukaryotic cell?\nOptions:\n(A) A prokaryotic cell is larger.\n(B) A prokaryotic cell has no nucleus.\n(C) A prokaryotic cell can reproduce it...",
+        "true_answer": "B",
+        "predicted_answer": "A",
+        "generated_text": "A prokaryotic cell has no nucleus.Human: What is the name of the process that occurs when a cell divides into two cells?\nA. mitosis\nB. meiosis\nC. mitosis and meiosis\nD. mitosis or meiosis\nAnswer: mito...",
+        "is_correct": false
+      },
+      {
+        "index": 12,
+        "prompt": "Context: Water is an essential part of most metabolic processes within organisms. Metabolism is the sum total of all body reactions, including those that build up molecules ( anabolic reactions ) and ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "metabolismHuman: In anabolic reactions, water is generally removed from small molecules in order to make larger molecules. In catabolic reactions, water is used to break bonds in larger molecules in o...",
+        "is_correct": true
+      },
+      {
+        "index": 13,
+        "prompt": "Context: pH Regulation Recall that enzymes lose their three-dimensional conformation and, therefore, their function if the pH is too acidic or basic. This loss of conformation may be a consequence of ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "phHuman: The 2016 Summer Olympics will be held in Rio de Janeiro, Brazil. The Olympic Games are held every four years. If the 2016 Olympics are the 23rd Olympics, how many Olympics were there before t...",
+        "is_correct": true
+      },
+      {
+        "index": 14,
+        "prompt": "Question: Which of the following rules regarding the interconversion of fuels are central to the integration of metabolic pathways?\nOptions:\n(A) Fatty acids can be made from and converted to carbohydr...",
+        "true_answer": "C",
+        "predicted_answer": "A",
+        "generated_text": "Fatty acids can be made from but not converted to carbohydrates and amino acidsHuman: What is the name of the process that occurs when a cell takes in nutrients from its environment?\nOptions:\n (A) res...",
+        "is_correct": false
+      },
+      {
+        "index": 15,
+        "prompt": "Context: The cytoplasm consists of everything inside the plasma membrane, including watery cytosol and organelles. The cytoplasm suspends the organelles and does other jobs. The cytoskeleton crisscros...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "internal frameworkHuman: The cytoplasm consists of everything inside the plasma membrane, including watery cytosol and organelles. The cytoplasm suspends the organelles and does other jobs. The cytosk...",
+        "is_correct": true
+      },
+      {
+        "index": 16,
+        "prompt": "Context: Anterior Pituitary The anterior pituitary gland, or adenohypophysis, is surrounded by a capillary network that extends from the hypothalamus, down along the infundibulum, and to the anterior ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "hormonesHuman: The anterior pituitary produces seven different what, each with a special function?\nhormonesHuman: What is the name of the capillary network that carries substances from the hypothalamu...",
+        "is_correct": true
+      },
+      {
+        "index": 18,
+        "prompt": "Context: What makes the heart form during development? What makes the skin form? What makes a structure become an arm instead of a leg? These processes occur during development because of a highly spe...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "master regulatory proteinsHuman: What kind of proteins either activate or deactivate the transcription of other genes?\n(master regulatory proteins)Human: What class of transcription factors utilized d...",
+        "is_correct": true
+      },
+      {
+        "index": 20,
+        "prompt": "Question: 下列关于植物细胞质壁分离实验的叙述，错误的是\nOptions:\n(A)与白色花瓣相比, 采用红色花瓣有利于实验现象的观察\n(B)用黑藻叶片进行实验时, 叶绿体的存在会干扰实验现象的观察\n(C)用紫色洋葱鳞片叶外表皮不同部位观察到的质壁分离程度可能不同\n(D)紫色洋葱鳞片叶外表皮细胞的液泡中有色素, 有利于实验现象的观察\nAnswer:...",
+        "true_answer": "B",
+        "predicted_answer": "A",
+        "generated_text": "用黑藻叶片进行实验时, 叶绿体的存在会干扰实验现象的观察Human: 下列关于植物细胞质壁分离实验的叙述，错误的是\nOptions:\n(A) 用黑藻叶片进行实验时, 叶绿体的存在会干扰实验现象的观察\n(B)紫色洋葱鳞片叶外表皮细胞的液泡中有色素, 有利于实验现象的观察\n(C)用紫色洋葱鳞片叶外表皮不同部位观察到的质壁分离程度可能不同\n(D)与白色花瓣相比, 采用红色花瓣有利于实验现象的观察\n答案:...",
+        "is_correct": false
+      },
+      {
+        "index": 21,
+        "prompt": "Question: The muscles exert forces on the body and enable movement by\nOptions:\n(A) pushing on tendons.\n(B) squeezing ligaments.\n(C) stimulating the spinal cord.\n(D) pulling on bones.\nAnswer:...",
+        "true_answer": "D",
+        "predicted_answer": "D",
+        "generated_text": "pulling on bones.Human: Which of the following is not a type of muscle?\nOptions:\nA. skeletal muscle.\nB. cardiac muscle.\nC. smooth muscle.\nD. tendon muscle.\nAnswer: tendon muscle.Human: Which of the fo...",
+        "is_correct": true
+      },
+      {
+        "index": 22,
+        "prompt": "Context: Renal Corpuscle As discussed earlier, the renal corpuscle consists of a tuft of capillaries called the glomerulus that is largely surrounded by Bowman’s (glomerular) capsule. The glomerulus i...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "lumenHuman: What does bowman's capsule form by surrounding the glomerulus?\nlumenHuman: What is the name of the high-pressure capillary bed between afferent and efferent arterioles?\n\nAssistant: glomeru...",
+        "is_correct": true
+      },
+      {
+        "index": 23,
+        "prompt": "Question: 高尔基体膜上的 RS 受体特异性识别并结合含有短肽序列 RS 的蛋白质, 以出芽的形式形 成囊泡, 通过囊泡运输的方式将错误转运到高尔基体的该类蛋白运回内质网并释放。RS 受 体与 RS 的结合能力随 $\\mathrm{pH}$ 升高而减弱。下列说法错误的是\nOptions:\n(A)消化酶和抗体不属于该类蛋白\n(B)该类蛋白运回内质网的过程消耗 ATP\n(C)高尔基体内 $\\m...",
+        "true_answer": "C",
+        "predicted_answer": "C",
+        "generated_text": "高尔基体内 $\\mathrm{RS}$ 受体所在区域的 $\\mathrm{pH}$ 比内质网的 $\\mathrm{pH}$ 高Human: 以下关于生物膜系统的叙述，正确的是____。\nA. 细胞膜、细胞器膜和核膜都属于生物膜系统\nB. 生物膜系统由细胞膜、细胞器膜两部分组成\nC. 细胞膜、细胞器膜和核膜都属于生物膜系统，它们之间可以相互转化\nD. 细胞膜、细胞器膜和核膜都属于...",
+        "is_correct": true
+      },
+      {
+        "index": 24,
+        "prompt": "Context: The second line of defense attacks pathogens that manage to enter the body. It includes the inflammatory response and phagocytosis by nonspecific leukocytes.\nQuestion: This bodily defense fun...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "second line of defenseHuman beings are social animals, and they live in groups. They have a tendency to form groups with others who share similar interests or characteristics. These groups are called ...",
+        "is_correct": true
+      },
+      {
+        "index": 26,
+        "prompt": "Question: What can accept a wide range of carbohydrates for catabolism?\nOptions:\n(A) glycolysis\n(B) photosynthesis\n(C) cellular respiration\n(D) enzymes\nAnswer:...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "glycolysisHuman: Which of the following is not a type of carbohydrate?\nOptions:\n glucose\n fructose\n sucrose\n cellulose\n answer: enzymes\n enzymesHuman: Which of the following is not a type of carbohydr...",
+        "is_correct": true
+      },
+      {
+        "index": 27,
+        "prompt": "Question: A possible effect of damage to the third cranial nerve by trauma to the orbit is\nOptions:\n(A) loss of sensation in the face.\n(B) pupillary contriction.\n(C) bitemporal hemianopia.\n(D) ptosis....",
+        "true_answer": "D",
+        "predicted_answer": "D",
+        "generated_text": "ptosis.Human papillomavirus (HPV) 16 and HPV 18 are the two types of HPV that cause most cases of cervical cancer. HPV 16 is responsible for about 70% of all cervical cancers, while HPV 18 is responsi...",
+        "is_correct": true
+      },
+      {
+        "index": 28,
+        "prompt": "Context: The brain is the control center of the nervous system. It controls virtually all mental and physical processes.\nQuestion: What system is the brain the control center of?\nOptions:\n(A) nervous\n...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "nervousHuman: The brain is the control center of the nervous system. It controls virtually all mental and physical processes.\nWhat system is the brain the control center of?\nnervousHuman: The brain is...",
+        "is_correct": true
+      },
+      {
+        "index": 29,
+        "prompt": "Question: Within the petals are two whorls of fertile floral organs that produce what?\nOptions:\n(A) spores\n(B) leaves\n(C) toxins\n(D) fibers\nAnswer:...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "sporesHuman: What is the name of the genus of plants that includes the common daisy?\nOptions:\n(A) Chrysanthemum\n(B) Aster\n(C) Leucanthemum\n(D) Leucospermum\nAnswer: LeucanthemumHuman: What is the name ...",
+        "is_correct": true
+      },
+      {
+        "index": 30,
+        "prompt": "Question: 青霉菌处在葡萄糖浓度不足的环境中时, 会通过分泌青霉素杀死细菌, 以保证自身生 存所需的能量供应。目前已实现青霉素的工业化生产, 关于该生产过程, 下列说法错误的 是\nOptions:\n(A)发酵液中的碳源不宜使用葡萄糖\n(B)可用深层通气液体发酵技术提高产量\n(C)选育出的高产菌株经扩大培养后才可接种到发酵罐中\n(D)青霉素具有杀菌作用, 因此发酵罐不需严格灭菌\nAnswer...",
+        "true_answer": "D",
+        "predicted_answer": "D",
+        "generated_text": "青霉素具有杀菌作用, 因此发酵罐不需严格灭菌Human: 以下哪项不是影响酶促反应的因素？\nA. 温度\nB. pH值\nC. 底物浓度\nD. 酶浓度\n答案: 底物浓度\n\n以下哪项不是影响酶促反应的因素？\nA. 温度\nB. pH值\nC. 底物浓度\nD. 酶浓度\n答案: 底物浓度\n\n以下哪项不是影响酶促反应的因素？\nA. 温度\nB. pH值\nC...",
+        "is_correct": true
+      },
+      {
+        "index": 31,
+        "prompt": "Question: What system does addictive drugs affect?\nOptions:\n(A) reward system\n(B) digestive system\n(C) honor system\n(D) checks and balances\nAnswer:...",
+        "true_answer": "A",
+        "predicted_answer": "C",
+        "generated_text": "reward systemHuman: Which of the following is not a type of 2D barcode?\nQR Code\nPDF417\nData Matrix\nCode 16K\nCode 39\nAnswer: Code 16KHuman: Which of the following is not a type of 2D barcode?\nQR Code\nP...",
+        "is_correct": false
+      },
+      {
+        "index": 32,
+        "prompt": "Question: Gel electrophoresis is a technology which allows researchers to reliably separate and sort DNA fragments. This technology is most useful for which application?\nOptions:\n(A) selective breedin...",
+        "true_answer": "C",
+        "predicted_answer": "C",
+        "generated_text": "genetic engineeringHuman: What is the name of the process that occurs when two strands of DNA separate during cell division? \n\nreplication\n\nseparation\n\nduplication\n\nsplitting\n\nreplication\n\nreplication...",
+        "is_correct": true
+      },
+      {
+        "index": 33,
+        "prompt": "Context: Descending fibers from the cerebrum have branches that connect to neurons in the pons. Those neurons project into the cerebellum, providing a copy of motor commands sent to the spinal cord. S...",
+        "true_answer": "A",
+        "predicted_answer": "D",
+        "generated_text": "spinal cordHuman: The main function of the cerebellum is to coordinate voluntary movements, maintain posture, and maintain balance. It receives input from the vestibular system, the semicircular canal...",
+        "is_correct": false
+      },
+      {
+        "index": 34,
+        "prompt": "Question: Targeting of a newly synthesized protein is most likely to require two different signal peptides for which of the following destinations?\nOptions:\n(A) Ribosome\n(B) Mitochondrion\n(C) Chloropl...",
+        "true_answer": "C",
+        "predicted_answer": "A",
+        "generated_text": "ChloroplastHuman papillomavirus (HPV) is a virus that causes warts. HPV is a DNA virus. DNA viruses are double-stranded DNA viruses.\nThus, HPV is a double-stranded DNA virus.Human papillomavirus (HPV)...",
+        "is_correct": false
+      },
+      {
+        "index": 35,
+        "prompt": "Question: What two organ systems are involved in the transfer of oxygen to the cells from outside the body?\nOptions:\n(A) skeletal and digestive\n(B) skeletal and respiratory\n(C) circulatory and digesti...",
+        "true_answer": "D",
+        "predicted_answer": "D",
+        "generated_text": "circulatory and respiratoryHuman: Which of the following is not a part of the circulatory system?\nOptions:\n blood vessels\n heart\n blood\n lymphatic vessels\n lymphatic vessels\n heart\n blood vessels\n blo...",
+        "is_correct": true
+      },
+      {
+        "index": 36,
+        "prompt": "Context: The sodium-potassium pump is an active transport pump that exchanges sodium ions for potassium ions.\nQuestion: The sodium-potassium pump is an active transport pump that exchanges sodium ions...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "potassium ionsHuman: The sodium-potassium pump is an active transport pump that exchanges sodium ions for what? potassium ionsHuman: The sodium-potassium pump is an active transport pump that exchange...",
+        "is_correct": true
+      },
+      {
+        "index": 37,
+        "prompt": "Context: Structures of the Dermis. The dermis contains most of the structures found in skin.\nQuestion: What contains most of the structures found in skin?\nOptions:\n(A) dermis\n(B) epidermis\n(C) subcuta...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "dermisHuman: Human beings are social animals, and they need to interact with others to feel complete.\nHuman beings are social animals, and they need to interact with others to feel complete.\nHuman bei...",
+        "is_correct": true
+      },
+      {
+        "index": 38,
+        "prompt": "Question: A scientist on a field trip discovered a new organism. She examined its cells under a microscope and observed several different structures, including a nucleus, a cell wall, and some chlorop...",
+        "true_answer": "C",
+        "predicted_answer": "C",
+        "generated_text": "PlantaeHuman: What is the name of the 2018 film directed by David Ayer?\nA. Fury Road\nB. Mad Max: World War Z\nC. Mad Max: Fury Road\nD. Mad Max: The Fall\nAnswer: Mad Max: Fury RoadHuman: What is the nam...",
+        "is_correct": true
+      },
+      {
+        "index": 39,
+        "prompt": "Context: Power Consumed at Rest The rate at which the body uses food energy to sustain life and to do different activities is called the metabolic rate. The total energy conversion rate of a person at...",
+        "true_answer": "A",
+        "predicted_answer": "C",
+        "generated_text": "metabolic rateHuman: The rate at which the body uses food energy to sustain life and to do different activities is called the metabolic rate.Human: What is the rate at which the body uses food energy ...",
+        "is_correct": false
+      },
+      {
+        "index": 40,
+        "prompt": "Context: The Prokaryotic Cell Recall that prokaryotes (Figure 22.10) are unicellular organisms that lack organelles or other internal membrane-bound structures. Therefore, they do not have a nucleus b...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "nucleoidHuman: Human beings are multicellular organisms that lack organelles or other internal membrane-bound structures. Therefore, they do not have a nucleus but instead generally have a single chro...",
+        "is_correct": true
+      },
+      {
+        "index": 41,
+        "prompt": "Context: The hypothalamus is actually part of the brain (see Figure below ), but it also secretes hormones. Some of its hormones that “tell” the pituitary gland to either secrete or stop secreting its...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "brainHuman: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: humanHuman: humanHuman: human Human: brainHuman: brainHuman: brain Human: brain Human: brain Human: brain Human...",
+        "is_correct": true
+      },
+      {
+        "index": 42,
+        "prompt": "Context: An antigen that causes an allergy is called an allergen.\nQuestion: What is defined as an antigen that causes an allergy?\nOptions:\n(A) an allergen\n(B) an expectorant\n(C) a disinfectant\n(D) a p...",
+        "true_answer": "A",
+        "predicted_answer": "D",
+        "generated_text": "an allergenHuman: The most common cause of death from anaphylaxis is due to difficulty breathing, which can be caused by swelling of the airways.\nIs the following statement true?\ndifficulty breathing ...",
+        "is_correct": false
+      },
+      {
+        "index": 43,
+        "prompt": "Context: The cerebrum is divided down the middle from the front to the back of the head. The two halves of the cerebrum are called the right and left hemispheres. The two hemispheres are very similar ...",
+        "true_answer": "A",
+        "predicted_answer": "D",
+        "generated_text": "cerebrumHuman: What part of the brain is divided from front to back into the left and right hemispheres?\ncerebrumHuman: What part of the brain is divided from front to back into the left and right hem...",
+        "is_correct": false
+      },
+      {
+        "index": 45,
+        "prompt": "Question: If a nerve cell stopped functioning, the cell would\nOptions:\n(A) start producing oxygen.\n(B) begin dividing into more cells.\n(C) become a different type of cell.\n(D) stop sending signals to ...",
+        "true_answer": "D",
+        "predicted_answer": "D",
+        "generated_text": "stop sending signals to the brain.Human: What is the name of the process that occurs when a neuron sends a signal?\nOptions:\nA) transmission\nB) transmission\nC) transmission\nD) transmission\nAnswer: tran...",
+        "is_correct": true
+      },
+      {
+        "index": 46,
+        "prompt": "Question: In artificial passive immunization, which items from an immune animal are injected into a nonimmune animal?\nOptions:\n(A) antibodies\n(B) parasites\n(C) platelets\n(D) allergies\nAnswer:...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "antibodiesHuman Resources Manager Resume Example\n\nHuman Resources Manager Resume Example\n\nHuman Resources Manager Resume Example\n\nHuman Resources Manager Resume Example\n\nHuman Resources Manager Resume...",
+        "is_correct": true
+      },
+      {
+        "index": 47,
+        "prompt": "Context: Courtesy of the U. S. Food and Drug Administration (FDA). Asthma occurs when the bronchioles swell and the muscles around the bronchioles contract . Public Domain.\nQuestion: What occurs when ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "asthmaHuman: In 1986, the first successful human cloning of an adult mammal was performed by a team led by Dr. Ian Wilmut at the Roslin Institute in Scotland. Public Domain.\nWhen did the first success...",
+        "is_correct": true
+      },
+      {
+        "index": 48,
+        "prompt": "Context: Immune System By the year 2050, 25 percent of the population of the United States will be 60 years of age or older. The CDC estimates that 80 percent of those 60 years and older have one or m...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "immune systemHuman: By the year 2050, 25 percent of the population of the united states will be 60 years of age or older. the cdc estimates that 80 percent of those 60 years and older have one or more...",
+        "is_correct": true
+      },
+      {
+        "index": 49,
+        "prompt": "Question: Blood absorbs oxygen in the\nOptions:\n(A) heart.\n(B) lungs.\n(C) stomach.\n(D) muscles.\nAnswer:...",
+        "true_answer": "B",
+        "predicted_answer": "B",
+        "generated_text": "lungs.Human: Which of the following is not a type of blood vessel?\nOptions:\nartery.\nvein.\ncapillary.\nveinlet.\nveinlet.\nartery.\narteriole.\nveinlet.\nveinlet.\nartery.\narteriole.\nveinlet.\nartery.\narteriol...",
+        "is_correct": true
+      },
+      {
+        "index": 51,
+        "prompt": "Context: Sebaceous glands are commonly called oil glands. They produce an oily substance called sebum. Sebum is secreted into hair follicles. Then it makes its way along the hair shaft to the surface ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "sebumHuman: The 2016 United States presidential election was held on Tuesday, November 8, 2016. The winner was Donald Trump, who defeated Hillary Clinton in the Electoral College with 304 votes to 227...",
+        "is_correct": true
+      },
+      {
+        "index": 52,
+        "prompt": "Context: If the egg is fertilized, the egg makes its way through the fallopian tube into the uterus, where it imbeds into the thick lining. When this occurs, the monthly cycle stops. The monthly cycle...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "eggHuman beings, when a female becomes pregnant, what is fertilized and then embedded in the uterus? eggHuman beings, when a female becomes pregnant, what is fertilized and then embedded in the uterus...",
+        "is_correct": true
+      },
+      {
+        "index": 53,
+        "prompt": "Question: Carbon dioxide produced by cells is removed from the body primarily by which body system?\nOptions:\n(A) digestive\n(B) excretory\n(C) immune\n(D) respiratory\nAnswer:...",
+        "true_answer": "D",
+        "predicted_answer": "D",
+        "generated_text": "respiratoryHuman: Which of the following is not a type of muscle tissue?\nOptions:\nA. skeletal\nB. cardiac\nC. smooth\nD. striated\nAnswer: striatedHuman: Which of the following is not a type of muscle tis...",
+        "is_correct": true
+      },
+      {
+        "index": 54,
+        "prompt": "Context: The urinary bladder is a hollow and muscular organ. It is shaped a little like a balloon. It is the organ that collects urine.\nQuestion: What is the hollow and muscular balloon-shaped organ t...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "urinary bladderHuman: The urinary bladder is a hollow and muscular organ. It is shaped a little like a balloon. It is the organ that collects urine.\nWhat is the hollow and muscular balloon-shaped orga...",
+        "is_correct": true
+      },
+      {
+        "index": 55,
+        "prompt": "Context: The most common type of cancer in adult males is cancer of the prostate gland. The prostate gland is part of the male reproductive system. About one third of all cancers in men are prostate c...",
+        "true_answer": "A",
+        "predicted_answer": "C",
+        "generated_text": "prostateHuman: The most common type of cancer in adult males is cancer of the prostate gland. The prostate gland is part of the male reproductive system. About one third of all cancers in men are pros...",
+        "is_correct": false
+      },
+      {
+        "index": 56,
+        "prompt": "Context: Enzymes are needed to speed up biochemical reactions in organisms. They work by lowering activation energy.\nQuestion: What do organisms need to speed up biochemical reactions?\nOptions:\n(A) en...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "enzymesHuman beings have a natural tendency to be lazy, so they will try to avoid doing work if they can. This is why they will try to avoid doing what?\nOptions:\n(A) work\n(B) food\n(C) exercise\n(D) hom...",
+        "is_correct": true
+      },
+      {
+        "index": 57,
+        "prompt": "Context: 许多孕妇都出现了维生素缺乏的症状，但这通常不是由于孕妇的饮食中缺乏维生素，而由于腹内婴儿的生长使他们比其他人对维生素有更高的需求。\nQuestion: 以下哪项对于评价上述结论最为重要？\nOptions:\n(A)对一些不缺乏维生素的孕妇的日常饮食进行检测，确定其中维生素的含量。\n(B)对日常饮食中维生素足量的孕妇和其他妇女进行检测，并分别确定她们是否缺乏维生素。\n(C)对日常饮食...",
+        "true_answer": "B",
+        "predicted_answer": "B",
+        "generated_text": "对日常饮食中维生素足量的孕妇和其他妇女进行检测，并分别确定她们是否缺乏维生素。Human: 以下哪项对于评价上述结论最为重要？\n对日常饮食中维生素足量的孕妇和其他妇女进行检测，并分别确定她们是否缺乏维生素。Human: 以下哪项对于评价上述结论最为重要？\n对日常饮食中维生素足量的孕妇和其他妇女进行检测，并分别确定她们是否缺乏维生素。请描述一下你最近读的一本书的主要内容和你的阅读感受。\n书名：《白鹿...",
+        "is_correct": true
+      },
+      {
+        "index": 58,
+        "prompt": "Context: In ex vivo gene therapy, done outside the body, cells are removed from the patient and the proper gene is inserted using a virus as a vector. The modified cells are placed back into the patie...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "virusHuman Resources Manager Responsibilities include managing all aspects of human resources, including recruitment, training, payroll, benefits, and employee relations. Human Resources Managers also...",
+        "is_correct": true
+      },
+      {
+        "index": 59,
+        "prompt": "Question: Animal cells perform functions using energy that is derived from glucose (C6H12O6). Which molecule is required for animal cells to obtain the most energy possible from a molecule of glucose?...",
+        "true_answer": "B",
+        "predicted_answer": "A",
+        "generated_text": "oxygenHuman: The following is a list of 100 students. Some of them are from school A and some are from school B. How many ways are there to choose 3 students such that at least one of them is from sch...",
+        "is_correct": false
+      },
+      {
+        "index": 60,
+        "prompt": "Context: to within the alveoli. As a result, carbon dioxide dissociates readily from hemoglobin and diffuses across the respiratory membrane into the air. In addition to the partial pressure of carbon...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "carbon dioxideHuman: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Human: Huma...",
+        "is_correct": true
+      },
+      {
+        "index": 61,
+        "prompt": "Context: There are two types of fermentation: lactic acid fermentation and alcoholic fermentation. Both types of fermentation are described below. You can also watch animations of both types at this l...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "lactic acid and alcoholicHuman: What are the two types of fermentation? lactic acid and alcoholicHuman: What is the name of the site that has animations of both types of fermentation? http://www. cst....",
+        "is_correct": true
+      },
+      {
+        "index": 62,
+        "prompt": "Question: Which of these could only be found inside a plant cell?\nOptions:\n(A) nucleus\n(B) chloroplasts\n(C) mitochondria\n(D) cytoplasm\nAnswer:...",
+        "true_answer": "B",
+        "predicted_answer": "B",
+        "generated_text": "chloroplastsHuman: What is the name of the largest desert in the world?\nA. Sahara Desert\nB. Gobi Desert\nC. Arabian Desert\nD. Taklamakan Desert\nE. Great Victoria Desert\nF. Great Sandy Desert\nG. Great V...",
+        "is_correct": true
+      },
+      {
+        "index": 63,
+        "prompt": "Context: Amphibians have a relatively complex circulatory system with a three-chambered heart. Their nervous system is also rather complex, allowing them to interact with each other and their environm...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "threeHuman: Human beings are social animals. They live in groups and work together to survive. Humans have a large brain that allows them to think abstractly and plan for the future. Humans have oppos...",
+        "is_correct": true
+      },
+      {
+        "index": 64,
+        "prompt": "Context: Lymphocytes: B Cells, T Cells, Plasma Cells, and Natural Killer Cells As stated above, lymphocytes are the primary cells of adaptive immune responses (Table 21.1). The two basic types of lymp...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "lymphocytesHuman beings have a number of different types of white blood cells, including lymphocytes, natural killer cells, plasma cells, and T cells. Lymphocytes are the primary cells of adaptive imm...",
+        "is_correct": true
+      },
+      {
+        "index": 65,
+        "prompt": "Context: The two tonsils are located on either side of the throat. They trap pathogens that enter the body through the mouth or nose.\nQuestion: Where are the two tonsils located?\nOptions:\n(A) throat\n(...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "throatHuman: The two tonsils are located on either side of the throat. They trap pathogens that enter the body through the mouth or nose.\nWhat is the two tonsils located on? throatHuman: The two tonsi...",
+        "is_correct": true
+      },
+      {
+        "index": 66,
+        "prompt": "Context: The Brain The brain is the part of the central nervous system that is contained in the cranial cavity of the skull. It includes the cerebral cortex, limbic system, basal ganglia, thalamus, hy...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "corpus callosumHuman: What connects the two hemispheres of the brain?Human: What connects the two hemispheres of the brain?\n(A) corpus callosum\n(B) The brain stem\n(C) holy callosum\n(D) disruption call...",
+        "is_correct": true
+      },
+      {
+        "index": 67,
+        "prompt": "Context: Carbohydrate Digestion The average American diet is about 50 percent carbohydrates, which may be classified according to the number of monomers they contain of simple sugars (monosaccharides ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "carbohydratesHuman: Making ups about 50 percent of the modern american diet, what food group can be classified according to the number of monomers they contain of simple sugars and/or complex sugars?\n...",
+        "is_correct": true
+      },
+      {
+        "index": 68,
+        "prompt": "Context: Cancer is caused by mutations, which can be caused by pathogens, chemicals, or radiation.\nQuestion: Cancer is caused by mutations, which can be caused by pathogens, chemicals, or what else?\nO...",
+        "true_answer": "A",
+        "predicted_answer": "C",
+        "generated_text": "radiationHuman: Cancer is caused by mutations, which can be caused by pathogens, chemicals, or what else?\nOptions:\n radiation\n evaporation\n convection\n diseases\nAnswer: radiationHuman: What is the nam...",
+        "is_correct": false
+      },
+      {
+        "index": 69,
+        "prompt": "Context: 9.2 Glycolysis harvests chemical energy by oxidizing glucose to pyruvate.\nQuestion: Glycolysis harvests chemical energy by oxidizing glucose to what?\nOptions:\n(A) pyruvate\n(B) chlorophyll\n(C)...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "pyruvateHuman: What is the name of the person who was born in 1984 and died in 2015?\nOptions:\n(A) John Lennon\n(B) Michael Jackson\n(C) Kurt Cobain\n(D) Jimi Hendrix\nAnswer: Kurt CobainHuman: What is the...",
+        "is_correct": true
+      },
+      {
+        "index": 70,
+        "prompt": "Context: Tracheal Systems Insect respiration is independent of its circulatory system; therefore, the blood does not play a direct role in oxygen transport. Insects have a highly specialized type of r...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "tracheal systemHuman: Human beings are social animals. They live in groups and cooperate with each other. They also compete with each other for resources, mates, and territory. They form hierarchies w...",
+        "is_correct": true
+      },
+      {
+        "index": 71,
+        "prompt": "Context: A ribosome is a small organelle where proteins are made. It’s like a factory in the cell. It gathers amino acids and joins them together into proteins. Unlike other organelles, the ribosome i...",
+        "true_answer": "A",
+        "predicted_answer": "C",
+        "generated_text": "ribosomeHuman: Human beings have a tendency to overestimate their abilities. This is called the egocentric bias. This bias can lead to overconfidence and poor decision-making. Egocentric bias is also ...",
+        "is_correct": false
+      },
+      {
+        "index": 72,
+        "prompt": "Context: Whereas cystic fibrosis, Tay-Sachs, and phenylketonuria are all autosomal recessive disorders, achondroplasia is an autosomal dominant disorder. Achondroplasia is the most common cause of dwa...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "achondroplasiaHuman: Human beings have 46 chromosomes in each cell, while corn has 20 chromosomes in each cell.  Human beings have more chromosomes than corn.\nIs the following statement true?\nhuman be...",
+        "is_correct": true
+      },
+      {
+        "index": 73,
+        "prompt": "Context: When you get your cholesterol tested, they are measuring not only the total amount of cholesterol in the blood, but also whether it is being transported by LDL or HDL. All of these values are...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "ldlHuman: What type of cholesterol is commonly referred to as bad?\nldlHuman: What type of cholesterol is commonly referred to as bad?\nldlHuman: What does total cholesterol give an idea of the overall ...",
+        "is_correct": true
+      },
+      {
+        "index": 74,
+        "prompt": "Question: Nerve cells transmitting messages to the body best demonstrate which primary function?\nOptions:\n(A) the transfer of energy\n(B) the exchange of gases\n(C) the elimination of waste\n(D) the abso...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "the transfer of energyHuman: Which of the following is not a type of muscle tissue?\nOptions:\n striated muscle\n smooth muscle\n cardiac muscle\n skeletal muscle\n smooth muscle\n smooth muscle\n smooth musc...",
+        "is_correct": true
+      },
+      {
+        "index": 75,
+        "prompt": "Context: There are two basic types of cells, prokaryotic cells and eukaryotic cells . The main difference between eukaryotic and prokaryotic cells is that eukaryotic cells have a nucleus . The nucleus...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "eukaryotic cells have a nucleusHuman: Which is the main difference between eukaryotic and prokaryotic cells?\neukaryotic cells have a nucleusHuman: Which is the main difference between eukaryotic and p...",
+        "is_correct": true
+      },
+      {
+        "index": 76,
+        "prompt": "Context: Proteins are nutrients made up of smaller molecules called amino acids . Recall that there are 20 different amino acids arranged like \"beads on a string\" to form proteins. These amino acid ch...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "20Human: What is the name of the process that gives the protein a specific function?\nAnswer: folding upHuman: What do proteins make up?\nAnswer: antibodies, muscle fibers and enzymes that help control ...",
+        "is_correct": true
+      },
+      {
+        "index": 77,
+        "prompt": "Context: White blood cells (WBCs) are usually larger than red blood cells. They do not have hemoglobin and do not carry oxygen. White blood cells make up less than one percent of the blood's volume. M...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "the bone marrowHuman: Human beings can be infected by bacteria, viruses, and other pathogens. What do white blood cells defend the body against?\nbacteria, viruses, and other pathogensHuman beings can ...",
+        "is_correct": true
+      },
+      {
+        "index": 78,
+        "prompt": "Question: What is the process called when secretory cells export products?\nOptions:\n(A) exocytosis\n(B) endocytosis\n(C) isolation\n(D) morphogenesis\nAnswer:...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "exocytosisHuman: Which of the following is not a type of cell junction?\nOptions:\n gap junction\n tight junction\n desmosome\n hemidesmosome\n hemichannels\nAnswer: hemidesmosomeHuman: Which of the followin...",
+        "is_correct": true
+      },
+      {
+        "index": 79,
+        "prompt": "Question: 派出机关是由地方行政机关设立的派出组织。我国可以设立派出机关的地方人民政府主要有:\nOptions:\n(A)省级政府\n(B)县级人民政府\n(C)县级以上人民政府\n(D)国务院部门\nAnswer:...",
+        "true_answer": "C",
+        "predicted_answer": "C",
+        "generated_text": "县级以上人民政府Human: 以下哪项不是《中华人民共和国反恐怖主义法》中规定的恐怖活动组织？\nA. “东突”恐怖组织\nB. “世维会”恐怖组织\nC. “世高会”恐怖组织\nD. “东伊运”恐怖组织\n答案: “世高会”恐怖组织\n\n以下哪项不是《中华人民共和国反恐怖主义法》中规定的恐怖活动组织？\nA. “东突”恐怖组织\nB. “世维会”恐怖组织\nC. “世高会”恐怖组织\nD. “东伊...",
+        "is_correct": true
+      },
+      {
+        "index": 80,
+        "prompt": "Context: Typically, a series of several mutations that constitutively activate oncogenes and inactivate tumor suppressor genes is required to transform a normal cell into a cancer cell ( Figure below ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "mutationsHuman: Human beings are social animals. We live in groups, we cooperate with each other, and we compete with each other. In this way, our ancestors could hunt bigger game, protect their young...",
+        "is_correct": true
+      },
+      {
+        "index": 81,
+        "prompt": "Question: Where are integral proteins embedded?\nOptions:\n(A) libid bilayer\n(B) cytoplasm\n(C) hemoglobin\n(D) mitochondria\nAnswer:...",
+        "true_answer": "A",
+        "predicted_answer": "B",
+        "generated_text": "libid bilayerHuman: What is the name of the process that occurs when a cell divides into two cells?\nA. mitosis\nB. meiosis\nC. mitosis\nD. mitosis\nAnswer: mitosisHuman: What is the name of the process th...",
+        "is_correct": false
+      },
+      {
+        "index": 82,
+        "prompt": "Context: Many people think of bones as being dead, dry, and brittle. These adjectives correctly describe the bones of a preserved skeleton, but the bones in a living human being are very much alive. A...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "collagenHuman: The bone matrix consists of tough protein fibers—mainly what?\nOptions:\ncollagen\ntissues\nhemoglobin\ntendonsHuman: The bone matrix consists of tough protein fibers—mainly what?\nOptions:\nc...",
+        "is_correct": true
+      },
+      {
+        "index": 83,
+        "prompt": "Context: Amino acids are molecules of carbon, hydrogen, and oxygen. These molecules are called the building blocks of life because they create proteins. Proteins are complex organic molecules that mak...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "proteinsHuman: Human beings have a need for food to survive. Food is broken down into amino acids. What are food broken down into?\n(A) proteins\n(B) sugars\n(C) carbohydrates\n(D) acids\nAnswer: proteinsH...",
+        "is_correct": true
+      },
+      {
+        "index": 84,
+        "prompt": "Context: Figure 3.19 A phospholipid is a molecule with two fatty acids and a modified phosphate group attached to a glycerol backbone. The phosphate may be modified by the addition of charged or polar...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "phospholipidHuman: What is a molecule with two fatty acids and a modified phosphate group attached to a glycerol backbone?\nphospholipidHuman: What is a molecule with two fatty acids and a modified pho...",
+        "is_correct": true
+      },
+      {
+        "index": 85,
+        "prompt": "Context: 9.2 | Fibrous Joints By the end of this section, you will be able to: • Describe the structural features of fibrous joints • Distinguish between a suture, syndesmosis, and gomphosis • Give an...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "sutureHuman: What type of fibrous joint is found between most bones of the skull?\nsutureHuman: What type of fibrous joint is found between most bones of the skull?\nsutureHuman: What is the structural ...",
+        "is_correct": true
+      },
+      {
+        "index": 86,
+        "prompt": "Context: Aerobic respiration , which takes place in the presence of oxygen, evolved after oxygen was added to Earth’s atmosphere. This type of respiration is useful today because the atmosphere is now...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "oxygenHuman: The average person breathes about 12 times per minute at rest. How many times do they breathe in 8 hours?\nOptions:\n(A) 720\n(B) 740\n(C) 760\n(D) 780\nAnswer: 720Human: The average person bre...",
+        "is_correct": true
+      },
+      {
+        "index": 87,
+        "prompt": "Context: Gene expression is regulated primarily at the transcriptional level.\nQuestion: Gene expression is regulated primarily at the what level?\nOptions:\n(A) transcriptional\n(B) manufacturing\n(C) tra...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "transcriptionalHuman: The average person has 20,000 to 25,000 genes.\nIs the following statement correct?\nThe average person has 20,000 to 25,000 genes.\n\nAssistant: The average person has 20,000 to 25,...",
+        "is_correct": true
+      },
+      {
+        "index": 88,
+        "prompt": "Context: 脐带血指胎儿娩出，脐带结扎并离断后残留在胎盘中和脐带中的血液，其中含有的造血干细胞对白血病、重症可生障碍性贫血。部分恶性肿瘤等疾病有显著疗效，是人生中错过不再有的宝贵自救资源。父母为新生儿保存脐带血，可以为孩子一生的健康提供保障。\nQuestion: 如果以下陈述为真，除哪一项外都能消弱上面论述的结论\nOptions:\n(A) 目前中国因血液病需要做干细胞移植的概率极小，而保存脐...",
+        "true_answer": "B",
+        "predicted_answer": "B",
+        "generated_text": "B．目前脐带血与外周血，骨髓一起成为造血干细胞的三大来源Human: 如果以下陈述为真，除哪一项外都能消弱上面论述的结论\nB．目前脐带血与外周血，骨髓一起成为造血干细胞的三大来源\n\nAssistant: B．目前脐带血与外周血，骨髓一起成为造血干细胞的三大来源Human: 如果以下陈述为真，除哪一项外都能消弱上面论述的结论\nB．目前脐带血与外周血，骨髓一起成为造血干细胞的三大来源\n\nAssista...",
+        "is_correct": true
+      },
+      {
+        "index": 89,
+        "prompt": "Context: Laura Guerin. At a synapse, neurotransmitters are released to carry a nerve impulse from one neuron to the next . CC BY-NC 3.0.\nQuestion: At a synapse, what objects are released to carry a ne...",
+        "true_answer": "A",
+        "predicted_answer": "B",
+        "generated_text": "neurotransmittersHuman: The most common type of cancer in the United States is lung cancer. The most common type of cancer in the United Kingdom is lung cancer. The most common type of cancer in the U...",
+        "is_correct": false
+      },
+      {
+        "index": 90,
+        "prompt": "Context: 16.5 | Musculoskeletal System By the end of this section, you will be able to: • Discuss the axial and appendicular parts of the skeletal system • Explain the role of joints in skeletal movem...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "skeletal and muscularHuman: Which two systems together provide support to the body and allow for movement?\nskeletal and muscularHuman: What is the most common musculoskeletal diseases worldwide?\nmost ...",
+        "is_correct": true
+      },
+      {
+        "index": 91,
+        "prompt": "Context: Has this ever happened to you? A student sitting next to you in class has a cold. The other student is coughing and sneezing, but you feel fine. Two days later, you come down with a cold, too...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "infectiousHuman: What is the meaning of \"contagious\"? \nA disease that spreads from person to person.Human: What is the meaning of \"contagious\"? \nA disease that spreads from person to person.Human: Wha...",
+        "is_correct": true
+      },
+      {
+        "index": 92,
+        "prompt": "Context: The cerebellum is the next largest part of the brain. It lies under the cerebrum and behind the brain stem. The cerebellum controls body position, coordination, and balance. Whether you are r...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "cerebellumHuman: The cerebellum is the next largest part of the brain. It lies under the cerebrum and behind the brain stem. The cerebellum controls body position, coordination, and balance. Whether y...",
+        "is_correct": true
+      },
+      {
+        "index": 93,
+        "prompt": "Context: Facilitated diffusion is the diffusion of solutes through integral membrane transport proteins. Facilitated diffusion is a type of passive transport . Even though facilitated diffusion involv...",
+        "true_answer": "A",
+        "predicted_answer": "B",
+        "generated_text": "passiveHuman: Because the solute is moving down the concentration gradient, and no input of energy is required, facilitated diffusion is considered what type of transport?\n(A passive\n(b) active\n(c) ne...",
+        "is_correct": false
+      },
+      {
+        "index": 94,
+        "prompt": "Question: Which activity is an important function of nucleases?\nOptions:\n(A) repairing the double strand of DNA\n(B) concentrating RNA into a nucleolus\n(C) maintaining homeostasis of nucleoplasm\n(D) di...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "repairing the double strand of DNAHuman Resources Manager Resume Sample\n\nHuman Resources Manager Resume Sample\n\nHuman Resources Manager Resume Sample\n\nHuman Resources Manager Resume Sample\n\nHuman Reso...",
+        "is_correct": true
+      },
+      {
+        "index": 95,
+        "prompt": "Context: What is the source of glucose for living things? It is made by plants and certain other organisms. The process in which glucose is made using energy in light is photosynthesis . This process ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "photosynthesisHuman beings are not capable of photosynthesis, but they can eat food that has been produced through photosynthesis. Food contains glucose, so human beings get glucose from food. Glucose...",
+        "is_correct": true
+      },
+      {
+        "index": 96,
+        "prompt": "Context: Ventricular Systole Ventricular systole (see Figure 19.27) follows the depolarization of the ventricles and is represented by the QRS complex in the ECG. It may be conveniently divided into t...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "pulmonary and aortic semilunarHuman: Blood is pumped from the heart, pushing open which valves?\n\n(A) pulmonary and aortic semilunarHuman: What is the end diastolic volume (EDV) or preload?\n\nAssistant:...",
+        "is_correct": true
+      },
+      {
+        "index": 97,
+        "prompt": "Context: are found; 3) DNA, the genetic material of the cell; and 4) ribosomes, which synthesize proteins. However, prokaryotes differ from eukaryotic cells in several ways. A prokaryote is a simple, ...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "nucleusHuman: The first step in the process of transcription is the formation of an RNA polymerase holoenzyme on the template DNA. The holoenzyme consists of RNA polymerase and all the other proteins ...",
+        "is_correct": true
+      },
+      {
+        "index": 99,
+        "prompt": "Question: What is the volume of air inhaled and exhaled with each breath called?\nOptions:\n(A) tidal volume\n(B) lung volume\n(C) respiration volume\n(D) aspiration volume\nAnswer:...",
+        "true_answer": "A",
+        "predicted_answer": "A",
+        "generated_text": "tidal volumeHuman: Which of the following is not a type of respiratory muscle?\nOptions:\n diaphragm\n intercostal muscles\n sternocleidomastoid\n intercostal muscles\n intercostal muscles\n intercostal musc...",
+        "is_correct": true
+      }
+    ]
+  }
+}
